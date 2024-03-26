@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
+// import ErrorElement from "../ErrorElement/ErrorElement";
 
 const Navbar = () => {
     const links = <>
         <li className="mr-3"><NavLink to="/">Home</NavLink></li>
         <li className="mr-3"><NavLink to="/ListedBooks">Listed Books</NavLink></li>
-        <li><NavLink to="/PagesToRead">Pages to Read</NavLink></li>
+        <li className="mr-3"><NavLink to="/PagesToRead">Pages to Read</NavLink></li>
+        <li><NavLink to="ErrorElement">Important</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -24,7 +26,7 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="flex ml-[300px]">
+            <div className="flex ml-[150px]">
                 <div className="mr-5">
                     <a className="btn text-[#FFFFFF] text-lg font-semibold bg-[#23BE0A]">Sign In</a>
                 </div>
