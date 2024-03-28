@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BookDataHooks from "../Hooks/BookDataHooks";
+import { saveToLocalStorage } from "../../utils/localStorage";
 
 const BookDetails = () => {
     const [singleData, setSingleData] = useState({});
     const { bookId } = useParams();
     const { info, loading } = BookDataHooks();
+
+    const handleDetails = () =>{
+        saveToLocalStorage(singleData);
+    }
 
     useEffect(() => {
         if (info) {
@@ -53,8 +58,8 @@ const BookDetails = () => {
 
                 </div>
                 <div className="flex text-lg font-semibold ml-36 mt-20">
-                    <div className="mr-10  text-[#131313] bg-[#1313134D] w-[120px] h-[55px]  text-center rounded-lg pt-3">
-                        <button>Read</button>
+                    <div  className="mr-10  text-[#131313] bg-[#1313134D] w-[120px] h-[55px]  text-center rounded-lg pt-3">
+                        <button onClick={handleDetails}>Read</button>
                     </div>
                     <div className="text-[#FFFFFF] bg-[#50B1C9] w-[120px] h-[55px] text-center rounded-lg pt-3">
                         <button>Wishlist</button>

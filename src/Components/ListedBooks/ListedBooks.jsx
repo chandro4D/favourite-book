@@ -7,6 +7,16 @@ const ListedBooks = () => {
             <div className="w-[145px] h-[52px] text-center rounded-lg pt-3 mt-[32px] ml-[650px] bg-[#23BE0A] text-lg font-semibold text-[#FFFFFF]">
                 <button>Sort By</button>
             </div>
+
+            <div className="flex ml-[135px] mt-16">
+                <div className="w-[135px] h-[50px] bg-red-100 mr-5 text-[#131313CC] text-center pt-3">
+                    <h2>Read Books</h2>
+                </div>
+                <div className="w-[135px] h-[50px] bg-red-100 text-[#131313CC] text-center pt-3">
+                    <h2>Wishlist Books</h2>
+                </div>
+            </div>
+
         </div>
     );
 };
