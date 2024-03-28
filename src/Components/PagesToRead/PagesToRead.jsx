@@ -1,6 +1,5 @@
-
-
 const PagesToRead = () => {
+    
     return (
         <div>
             <h3>This Is Pages to Read Section</h3>
