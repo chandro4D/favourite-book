@@ -1,13 +1,13 @@
 export const saveToLocalStorage = (data) =>{
-    const saveData = JSON.parse(localStorage.getItem("details") || []);
-
-    const existedData = saveData.find((item) => item.bookId == data.bookId);
+    const savedData =JSON.parse(localStorage.getItem("donate")) || [];
+    const existedData = savedData.find((item) => item.bookId == data.bookId);
     if(!existedData){
-        saveData.push(data);
-        localStorage.setItem("details",JSON.stringify(saveData));
-        alert("Added Data Successfully")
+        savedData.push(data);
+        localStorage.setItem("donate",JSON.stringify(savedData));
+        alert("added Data Succesfully");
     }
     else{
         alert("Already Have This Data");
     }
-}
+
+};

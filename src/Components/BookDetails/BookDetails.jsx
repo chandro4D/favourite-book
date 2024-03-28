@@ -16,7 +16,7 @@ const BookDetails = () => {
         if (info) {
             const singleData = info.find((item) => item.bookId == bookId);
             setSingleData(singleData);
-            console.log(singleData);
+            // console.log(singleData);
         }
     }, [info, bookId])
 
