@@ -11,3 +11,7 @@ export const saveToLocalStorage = (data) =>{
     }
 
 };
+export const getFromLocalStorage = () => {
+    const data = JSON.parse(localStorage.getItem("donate")) || [];
+    return data;
+};

@@ -4,7 +4,7 @@ const Book = ({ book }) => {
     const { image, tags, bookName, author, category, rating, bookId } = book;
     return (
         <Link to={`/book-details/${bookId}`}>
-            <div className="card w-[400px] h-[680px]  bg-[#F3F3F3] shadow-xl gap-10 mb-10">
+            <div className=" card w-[400px] h-[680px]  bg-[#F3F3F3] shadow-xl gap-10 mb-10">
                 <figure><img className=" mt-5 w-[350px] h-[400px] rounded-2xl " src={image} alt="Shoes" /></figure>
                 <div className="card-body ">
                     <div>
