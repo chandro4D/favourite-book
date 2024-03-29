@@ -11,6 +11,9 @@ const BookDetails = () => {
     const handleDetails = () =>{
         saveToLocalStorage(singleData);
     }
+    const wishlistDetails = () =>{
+        saveToLocalStorage(singleData);
+    }
 
     useEffect(() => {
         if (info) {
@@ -62,7 +65,7 @@ const BookDetails = () => {
                         <button onClick={handleDetails}>Read</button>
                     </div>
                     <div className="text-[#FFFFFF] bg-[#50B1C9] w-[120px] h-[55px] text-center rounded-lg pt-3">
-                        <button>Wishlist</button>
+                        <button onClick={wishlistDetails}>Wishlist</button>
                     </div>
                 </div>
 

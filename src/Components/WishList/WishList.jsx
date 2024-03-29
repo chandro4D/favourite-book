@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom";
 import useLocalStorage from "../Hooks/useLocalStorage";
 import ListedBook from "../ListedBook/ListedBook";
 
-const ListedBooks = () => {
+
+const WishList = () => {
     const { localData } = useLocalStorage();
-    // console.log(localData)
     return (
         <div>
             <div className="mt-10 rounded-[16px] bg-slate-300 text-center ml-[135px] pt-6 w-[1180px] h-[100px] text-[#131313] text-3xl font-bold">
@@ -16,7 +16,7 @@ const ListedBooks = () => {
 
             <div className="flex ml-[135px] mt-16">
                 <div className="rounded-[8px] w-[135px] h-[50px] bg-red-100 mr-5 text-[#131313CC] text-center pt-3">
-                    <NavLink to="/ListedBooks"><h2>Read Books</h2></NavLink>
+                    <h2>Read Books</h2>
                 </div>
                 <div className="rounded-[8px] w-[135px] h-[50px] bg-red-100 text-[#131313CC] text-center pt-3">
                     <NavLink to="/WishList"><h2>Wishlist Books</h2></NavLink>
@@ -29,7 +29,11 @@ const ListedBooks = () => {
             </div>
 
         </div>
+
+
+
+
     );
 };
 
-export default ListedBooks;
+export default WishList;
